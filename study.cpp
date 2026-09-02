@@ -61,6 +61,7 @@ int main(){
         }
     }while( choose < 1 || choose > 2);
 
+    int char;
 
     }
 }
