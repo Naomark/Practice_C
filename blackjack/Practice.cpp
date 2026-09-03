@@ -5,7 +5,7 @@
 #define TWO_DORROW 2
 
 int main(){
-    srand(time(NULL));
+    
 
     std::cout << "Lets start BLACK JACK!!" << std::endl;
 
@@ -26,6 +26,7 @@ int main(){
 
     // 最初の手札2枚を引く
     for(int i = 0; i < TWO_DORROW; i++){
+        srand(time(NULL));
         int card_number = 1 + rand() % CARD_NUMBER; //1～13の乱数
 
     switch(card_number){
@@ -43,17 +44,20 @@ int main(){
         case 13: std::cout << "K ";
                  sum += 10;
                  break;    
+
         default: std::cout << card_number << " ";
                  sum += card_number;
                  break;
     }
     }
 
+    std::cout << " :" << sum;
+
     while(1){
         int choose;
         
         do{
-        std::cout << "Hit or Stand ? (1:Hit : 2:Stand):";
+        std::cout << "\n" << "Hit or Stand ? (1:Hit : 2:Stand):";
         std::cin >> choose;
 
         if(choose == 1){
