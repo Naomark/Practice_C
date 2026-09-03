@@ -28,12 +28,15 @@ namespace Japanese{
 }
 
 int main(){
+
+    using Japanese::hello;
+
     cout << "English::x = " << English::x << endl;
     English::print_x();
     English::hello();
     
     cout << "Japanese::x = " << Japanese::x << endl;
     Japanese::print_x();
-    Japanese::hello();
+    hello();
     
 }
